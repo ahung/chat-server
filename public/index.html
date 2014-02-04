@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Chat Server</title>
+    <script src="http://code.jquery.com/jquery-2.0.3.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./javascripts/chat.js"></script>
+    <script src="./javascripts/chat_ui.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1> Albert's Chat Server </h1>
+      <div class="row">
+        <h2>Chat Log</h2>
+        <div class="col-xs-6" style="height:300px; overflow:scroll; border: black solid"
+        id="message-area">
+          <p>Welcome to Albert's Chat Server!</p>
+          <p>Please Enter a Username to Continue</p>
+          <p id="messages">
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-6 form-group">
+          <form id="message-form">
+            <input class="form-control" type="text" id="message-text" placeholder="Input Message or Command and Press Enter">
+            <input style="display:none;" type="submit" value="Send">
+          </form>
+        </div>
+      </div>
+      <div>
+        <p id="current-room"></p>
+        <p id="username"></p>
+      </div>
+    </div>
+  </body>
+
+</html>
