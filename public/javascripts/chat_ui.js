@@ -67,7 +67,10 @@
       event.preventDefault();
       var text = $(event.currentTarget).find("#message-text").val();
       $(event.currentTarget).find("#message-text").val("");
-      if (text[0] === '/') {
+      var trimText = $.trim(text)
+      if (trimText === '') {
+        //text is blank or white space - do nothing
+      } else if (text[0] === '/') {
         ChatApp.processCommand(text);
       } else {
         chat.sendMessage(text);
