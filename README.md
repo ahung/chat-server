@@ -1,6 +1,7 @@
 Chat Server
 ===========
 Basic Chat App built using node.js and socket.io  
+Check it out live: [here](http://chat.alberthung.net)
   
 Commands: 
   * /rooms - list all active rooms
@@ -17,5 +18,6 @@ Features:
   * Shows current room you're in and your username
   * Usernames in front of messages
   * Notifications of users joining and leaving
+  * Rooms are closed and removed from the active room list once there are no users in it
   * Prevent sending the message if text is blank or just whitespace
   * Prevent user from using commands if a username hasn't been chosen yet
